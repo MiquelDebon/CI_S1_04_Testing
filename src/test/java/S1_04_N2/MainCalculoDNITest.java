@@ -11,4 +11,6 @@ public class MainCalculoDNITest {
             assertTrue(MainCalculoDNI.allCheck(dnis[i]));
         }
     }
+
+
 }
