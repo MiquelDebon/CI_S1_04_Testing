@@ -8,16 +8,16 @@ public class MainCalculoDNI {
     static String dni = "";
     static int numeroDni = 0;
     static char letra = ' ';
-    static char rightLetter = ' ';
     static Scanner sc = new Scanner(System.in);
 
-    public static void main(String[] args) {
 
+    public static void main(String[] args) {
         System.out.print("✏️Introduce tu DNI: ");
         dni = sc.nextLine();
-        output(allCheck(dni));
+        printResult(checkDNI(dni));
 
     }
+
 
     static int keepNumber(String dni){
         return numeroDni = Integer.parseInt(dni.substring(0, (dni.length() - 1)));
@@ -34,14 +34,14 @@ public class MainCalculoDNI {
         return abc[residu];
     }
 
-    static boolean allCheck(String dni){
+    static boolean checkDNI(String dni){
         int number = keepNumber(dni);
         char letra = keeoLetter(dni);
         char rightLetter = checkLetterRightMethod(number);
         return (letra == rightLetter);
     }
 
-    static void output(Boolean asnwer){
+    static void printResult(Boolean asnwer){
         if(asnwer){
             System.out.println("✅ DNI Correcto");
         }else{
