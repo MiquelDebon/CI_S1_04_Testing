@@ -5,7 +5,6 @@ import static org.assertj.core.api.Assertions.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import java.nio.file.OpenOption;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Optional;
@@ -107,8 +106,9 @@ public class AssertJTest {
         objArrayList.add(string);
         //objArrayList.add(person1);
 
-//        assertThat(objArrayList).containsOnlyOnce(numero); //Error contains two units
         assertThat(objArrayList).doesNotContainSequence(numero, numero, string, person1);
+        assertThat(objArrayList).doesNotContain(person1);
+
     }
 
     //Exercise 5 ----------------
