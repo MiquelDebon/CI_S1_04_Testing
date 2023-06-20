@@ -141,6 +141,9 @@ public class AssertJTest {
         Person person1 = new Person();
         assertThatExceptionOfType(IndexOutOfBoundsException.class)
                 .isThrownBy(person1::throeExceptionMethod);
+
+        assertThatExceptionOfType(IndexOutOfBoundsException.class)
+                .isThrownBy(() -> person1.throeExceptionMethod());
     }
 
     //Exercise 7 ----------------
